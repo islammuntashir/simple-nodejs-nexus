@@ -49,5 +49,5 @@ jobs:
 
       - name: Moving build to artifacts directory
         run: |
-          sh ./script/deploy.sh
+          sh ./deploy.sh
       
