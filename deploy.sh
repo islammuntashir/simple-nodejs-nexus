@@ -1,5 +1,6 @@
 #!/bin/bash
 pwd
+cd code 
 git pull
 docker-compose pull
 docker-compose stop
