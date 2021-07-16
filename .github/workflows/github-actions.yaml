@@ -47,7 +47,12 @@ jobs:
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
-      - name: Moving build to artifacts directory
-        run: |
-          sh ./deploy.sh
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: 3.222.207.247
+          username: ubuntu
+          key: ${{ secrets.PRIVKEY }}
+          port: 22
+          script: whoami
       
