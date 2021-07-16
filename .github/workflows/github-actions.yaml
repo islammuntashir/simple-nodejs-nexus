@@ -46,3 +46,8 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+
+      - name: Moving build to artifacts directory
+        run: |
+          sh ./script/deploy.sh
+      
