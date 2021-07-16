@@ -54,5 +54,5 @@ jobs:
           username: ubuntu
           key: ${{ secrets.PRIVKEY }}
           port: 22
-          script: whoami
+          script: bash /home/ubuntu/code/simple-node-nexus
       
