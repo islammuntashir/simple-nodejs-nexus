@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "publishConfig": {
-    "registry": "http://a80691efeb06e4e68baed8fac88e3ee0-1481040365.ap-southeast-1.elb.amazonaws.com:8081/repository/private-npm/"
-  },
   "scripts": {
+    "prepare": "npm run co:login",
+    "co:login": "aws codeartifact login --tool npm --repository mynpm --domain xxxxx --domain-owner xxxxxx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "simple-node-nexus": "^1.0.0"
   }
 }
